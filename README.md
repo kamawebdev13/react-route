@@ -74,3 +74,4 @@ export default defineConfig([
 ])
 ```
 # react-route
+# wod-generator
