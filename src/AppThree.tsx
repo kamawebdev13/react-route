@@ -1,29 +1,23 @@
-import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import NavBar from './componentes/EBM/NavBar/NavBar'
-import Hero from './componentes/EBM/Hero/Hero'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './componentes/EBM/Header/Header'
+import Home from './componentes/EBM/Pages/Home/Home'
+import Games from './componentes/EBM/Pages/Games/Games'
+import Grammar from './componentes/EBM/Pages/Grammar/Grammar'
+import AboutUs from './componentes/EBM/Pages/AboutUs/AboutUs'
 
 
 function AppThree() {
-
   return (
-    <>
-      <BrowserRouter>
-        <nav className="p-4 bg-indigo-600 text-white flex gap-4 shadow-lg rounded-lg">
-          <Link to="/" className="hover:underline font-bold">Home</Link>
-          <Link to="/Games" className="hover:underline font-bold">Games</Link>
-          <Link to="/Grammar" className="hover:underline font-bold">Grammar</Link>
-          <Link to="/Grammar" className="hover:underline font-bold">About Us</Link>
-          <img src="" alt="" />
-          
-        </nav>
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/Ofertas' element={<OfferViewer />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Games' element={<Games />} />
+        <Route path='/Grammar' element={<Grammar />} />
+        <Route path='/AboutUs' element={<AboutUs />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,14 +1,10 @@
-import { StrictMode } from 'react'
+import { StrictMode } from 'react' 
 import { createRoot } from 'react-dom/client'
-import './index.css'
-// import App from './App.tsx'
-// import AppTwo from './AppTwo.tsx'
-import AppThree from './AppTwo.tsx'
+import './index.css' 
+import AppThree from './AppThree.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <App /> */}
-      {/* <AppTwo /> */}
-        <AppThree />
+    <AppThree />
   </StrictMode>,
 )
