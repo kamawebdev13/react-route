@@ -1,4 +1,77 @@
+/* 1. Primero TODOS los imports */
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+/* 2. Después el bloque de configuración @theme */
+@theme {
+  --font-fredoka: "Fredoka", sans-serif;
+  
+  --font-size-h-extra-xl: 6em;
+  --font-size-h-xxl: 5em;
+  --font-size-h-xl: 4em;
+  --font-size-h-lg: 2.5em;
+  --font-size-h-md: 2em;
+  --font-size-h-sm: 1.5em;
+  --font-size-h-xs: 1em;
+  --font-size-body: 0.875em;
+  --font-size-link-lg: 2.5em;
+  --font-size-link-md: 1.2em;
+  --font-size-link: 1em;
+  --font-size-link-xs: 0.75em;
+
+  --color-c-text: #211832;
+  --color-c-text-two: #758A93;
+  --color-c-active-one: #5A9CB5;
+  --color-c-active-two: #FACE68;
+  --color-c-active-three: #FA6868;
+  --color-c-active-four: #BADFDB;
+  --color-c-hover: #FEEAC9;
+
+  --spacing-s-xxl: 8rem;
+  --spacing-s-xl: 4rem;
+  --spacing-s-lg: 3rem;
+  --spacing-s-md: 2rem;
+  --spacing-s-sm: 1rem;
+  --spacing-s-xs: 0.5625rem;
+  
+  --radius-r-md: 3rem;
+  --radius-r-mmd: 1.5rem;
+
+  --shadow-btn: 6px 6px 0 rgba(85, 88, 121, 0.6);
+  --shadow-btn-sm: 2px 2px 0 rgba(85, 88, 121, 0.6);
+}
+
+/* 3. Por último las capas base o estilos globales */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-fredoka);
+  }
+  body {
+    background-color: var(--color-c-active-four);
+    color: white;
+    overflow: visible;
+  }
+  ul { list-style: none; }
+  a { text-decoration: none; color: inherit; }
+}
+
+@layer utilities {
+  .text-stroke-white {
+    text-shadow: 
+      -2px -2px 0 #ffffff,
+       2px -2px 0 #ffffff,
+      -2px  2px 0 #ffffff,
+       2px  2px 0 #ffffff,
+       4px  4px  8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
