@@ -1,7 +1,9 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Home from './componentes/Home/Home'
-import OfferViewer from './componentes/OfferViewer/OfferViewer'
+import NavBar from './componentes/EBM/NavBar/NavBar'
+import Hero from './componentes/EBM/Hero/Hero'
+
+
 
 function AppThree() {
 
@@ -10,7 +12,11 @@ function AppThree() {
       <BrowserRouter>
         <nav className="p-4 bg-indigo-600 text-white flex gap-4 shadow-lg rounded-lg">
           <Link to="/" className="hover:underline font-bold">Home</Link>
-          <Link to="/Ofertas" className="hover:underline font-bold">Ofertas</Link>
+          <Link to="/Games" className="hover:underline font-bold">Games</Link>
+          <Link to="/Grammar" className="hover:underline font-bold">Grammar</Link>
+          <Link to="/Grammar" className="hover:underline font-bold">About Us</Link>
+          <img src="" alt="" />
+          
         </nav>
         <Routes>
           <Route path='/' element={<Home />}></Route>
